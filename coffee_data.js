@@ -61,17 +61,20 @@ const coffeeMenu = [
 
 //couldn't get file to export so doing examples here 
 
+//2
 const printDrinks = (item) => {
     return item.name
 }
 console.log(coffeeMenu.map(printDrinks));
 
+//3
 const fiveDollarDrinks = (item) => {
     return item.price <=5;
 }
 const drinksUnderFive = coffeeMenu.filter(fiveDollarDrinks);
 console.table(drinksUnderFive);
 
+//4
 const evenNumberedDrinks = (item) => {
     return item.price % 2 === 0;
 }
@@ -79,3 +82,15 @@ const evenNumberedDrinks = (item) => {
 const evenDrinks = coffeeMenu.filter(evenNumberedDrinks);
 console.log(evenDrinks);
 
+//6
+const isSeasonal = (item) => {
+    return item.seasonal === true;
+}
+const seasonalDrinks = coffeeMenu.filter(isSeasonal);
+console.log (seasonalDrinks);
+
+//7
+const wordPlay = (item)=>{
+    if (item.seasonal === true){
+    return item.name}
+}
