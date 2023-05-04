@@ -16,7 +16,7 @@ const coffeeMenu = [
         seasonal: false,
     },
     {
-        name: espresso,
+        name: "espresso",
         price: 5,
         seasonal: false,
     },
@@ -47,7 +47,7 @@ const coffeeMenu = [
     },
     {
         name: "frappe",
-        price: "8",
+        price: 8,
         seasonal: false,
     },
     {
@@ -55,6 +55,27 @@ const coffeeMenu = [
         price: 10,
         seasonal: true,
     }
-]
+];
 
- module.exports = coffeeMenu;
+// module.exports = coffeeMenu;
+
+//couldn't get file to export so doing examples here 
+
+const printDrinks = (item) => {
+    return item.name
+}
+console.log(coffeeMenu.map(printDrinks));
+
+const fiveDollarDrinks = (item) => {
+    return item.price <=5;
+}
+const drinksUnderFive = coffeeMenu.filter(fiveDollarDrinks);
+console.table(drinksUnderFive);
+
+const evenNumberedDrinks = (item) => {
+    return item.price % 2 === 0;
+}
+
+const evenDrinks = coffeeMenu.filter(evenNumberedDrinks);
+console.log(evenDrinks);
+
